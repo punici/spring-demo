@@ -9,13 +9,14 @@
     </parent>
 
     <groupId>com.punici.demo</groupId>
-    <artifactId>demo-serever</artifactId>
+    <artifactId>demo-server</artifactId>
     <version>${project.deploy.version}</version>
     <name>demo-server</name>
     <description>Demo project for Spring Boot</description>
     <packaging>jar</packaging>
 
     <dependencies>
+        <!--spring-boot-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -32,7 +33,11 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--database-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -44,6 +49,25 @@
             <scope>runtime</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.punici</groupId>
+            <artifactId>demo-model</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.9.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -51,6 +75,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.8</version>
             </plugin>
         </plugins>
     </build>

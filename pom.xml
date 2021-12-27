@@ -15,7 +15,7 @@
     <name>spring-demo</name>
     <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
-    
+
     <modules>
         <module>demo-model</module>
         <module>demo-server</module>
@@ -38,6 +38,7 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
                 <version>2.9.2</version>
+                <optional>true</optional>
             </dependency>
 
             <dependency>
@@ -45,6 +46,31 @@
                 <artifactId>servlet-api</artifactId>
                 <version>6.0.33</version>
                 <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.punici</groupId>
+                <artifactId>demo-model</artifactId>
+                <version>${project.deploy.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.7.18</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <optional>true</optional>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>4.9.3</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
