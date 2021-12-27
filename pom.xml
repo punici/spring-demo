@@ -8,12 +8,44 @@
         <version>2.5.8</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.punic.demo</groupId>
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-demo</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
+    
+    <modules>
+        <module>demo-model</module>
+        <module>demo-server</module>
+    </modules>
+
     <properties>
         <java.version>1.8</java.version>
+        <project.deploy.version>0.0.1-SNAPSHOT</project.deploy.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>2.0.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.9.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>6.0.33</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
